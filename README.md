@@ -9,6 +9,7 @@ display: flex;
 
 flex-direction: row; 
   /*
+    - specifies direction of items
     row: initial value, normal flex order
     row-reverse: reverse direction of main axis
     column: order in columns
@@ -17,6 +18,7 @@ flex-direction: row;
   
   justify-content: center;
   /*
+    - defines alignment along main axis
     center: positions items into the middle of container
     space-between: evenly distributes space among items
     space-around: puts the same amount of space on both sides od the items
@@ -27,6 +29,7 @@ flex-direction: row;
   
   align-items: center;
   /*
+    - defines alignment along cross axis
     center: center elements on cross axis, based on biggest item
     flex-start: aligns items at the top of cross axis
     flex-end: aligns items at the end of cross axis
@@ -34,17 +37,21 @@ flex-direction: row;
     baseline: aligns the text of the items, like invisible line under text
   */
   
-  flex-wrap: wrap; /* will create new lines for items that dont fit container */
+  flex-wrap: wrap;
   /*
-    nowrap, wrap, wrap-reverse
+    - defines wrapping
+    nowrap:
+    wrap: will create new lines for items that dont fit container
+    wrap-reverse;
   */
   
   align-content: space-between;
   /* 
+    - applies where there is more than 1 row
     flex-start: aligns rows on top of cross axis 
     flex-end: aligns rows on bottom of cross axis
     center: center vertically
-    space-around: distributes space between the rows, same space on         top and bottom of the rows
+    space-around: distributes space between the rows, same space on top and bottom of the rows
     space-between: one of the lines on top, other on the bottom
     stretch: initial value
   */
@@ -65,7 +72,7 @@ align-self: flex-end;
 
 order: 1; 
 /*
-  flexbox orders elements based on order number; initial value is 0 
+  - flexbox orders elements based on order number; initial value is 0 
 */
 
 flex-grow: 1; 
@@ -76,14 +83,14 @@ flex-grow: 1;
 
 flex-shrink: 0;
 /*
-  defines how much an element is allowed to shrink
+  - defines how much an element is allowed to shrink
   0: element is not allowed to shrink
   1: initial value - element is allowed to shrink
 */
 
 flex-basis: 300px;
 /*
-  defines base width of item
+  - defines base width of item
 */
 
 flex: 0 1 300px; /*shortcut for grow, shrink and basis */
