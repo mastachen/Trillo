@@ -20,7 +20,8 @@ flex-direction: row;
   /*
     - defines alignment along main axis
     center: positions items into the middle of container
-    space-between: evenly distributes space among items
+    space-between: evenly distributes space among items,
+      divides all available space between elements
     space-around: puts the same amount of space on both sides od the items
     space-evenly: all spaces between items are always the same
     flex-end: puts items on the right side
