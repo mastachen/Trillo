@@ -36,7 +36,18 @@ all variables defined here will be available to all the child elements
     --color-grey-dark-3: #999;
 
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-grey-light-2);
 }
+
+//SASS variables
+//em for media queries is based on default browser font size, not our css defined font-size
+$bp-largest: 75em; //1200px (1200/16), we can not specify this with css variables, so we have to use sass variables
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
 
 * {
     margin: 0;
@@ -51,6 +62,10 @@ all variables defined here will be available to all the child elements
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {

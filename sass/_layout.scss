@@ -5,30 +5,93 @@
     box-shadow: var(--shadow-dark);
 
     min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
     font-size: 1.4rem;
     height: 7rem;
     background-color: #FFF;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: var(--line);
     display: flex;
     justify-content: space-between;
     align-items: center; //align along the cross axis
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
 }
 
 .content {
     display: flex; //this element is flex container
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 //navigation sidebar
 .sidebar { 
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between; 
+    //divides all available space between elements, one will be on top, other on bottom 
+
+
 }
 
 .hotel-view {
     background-color: #FFF;
     flex: 1; //element will grow as much as it can, occupies all remaining space 
-    background-color: orangered;
+}
+
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    background-color: #FFF;
+    flex: 0 0 60%;
+    margin-right: 4.5rem; //same as padding on detail
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right:  3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    flex: 1; //flex-grow 1 means item will occupy all of the remaining space
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
